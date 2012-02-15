@@ -7,6 +7,10 @@
         "stylus": ">= 0.0.1",
         "jade": ">= 0.0.1",
         "requirejs": ">= 1.0.5",
+        "coffee-script": ">= 1.2.0",
         "socket.io": ">= 0.8.7"
+    },
+    "scripts": {
+        "start": "coffee server.coffee"
     }
 }
