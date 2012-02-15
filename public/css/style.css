@@ -1,0 +1,91 @@
+html, body {
+	/*background-color: black;*/
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	/* For WebKit (Safari, Google Chrome etc) */
+    background: -webkit-gradient(linear, left top, left bottom, from(#404160), to(#5a413a));
+    /* For Mozilla/Gecko (Firefox etc) */
+    background: -moz-linear-gradient(top, #404160, #5a413a);
+    /* For Internet Explorer 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#404160, endColorstr=#5a413a);
+    /* For Internet Explorer 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#404160, endColorstr=#5a413a)";
+}
+
+#viewport {
+	background-color: transparent;
+	position: absolute;
+	width: 3920px;
+	height: 1196px;
+	bottom: 0;
+	left: 50%;
+	margin-left: -1960px;
+	/*background: transparent url('/images/backgrounds/back_1.png') repeat-x 0 880px;*/
+}
+
+
+canvas {
+	/*background-color: transparent;*/
+	position: absolute;
+	width: 3920px;
+	height: 1196px;
+	bottom: 0;
+	left: 50%;
+	margin-left: -1960px;
+}
+
+#effects {
+	z-index: 1000;
+}
+#terrain {
+	z-index: 2000;
+}
+#main {
+	z-index: 3000;
+}
+#UI {
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 4000;
+	position: relative;
+}
+
+#UI #windspeed {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background: url('../images/sprites/wind_speedometer_frame.png') no-repeat center right transparent;
+	width: 182px;
+	height: 18px;
+}
+
+#UI #windspeed .left_container,.right_container {
+	display: block;
+	width: 87px;
+	height: 13px;
+	margin: 2px;
+	float: left;
+}
+
+#UI #windspeed .right_container {
+	margin-left: 1px;
+}
+
+#UI #windspeed .left_container .left {
+	background: url('../images/sprites/windleft.png') repeat-x 0 0 transparent;
+	height: 13px;
+	width: 87px;
+	float: right;
+}
+
+#UI #windspeed .right_container .right {
+	background: url('../images/sprites/windright.png') repeat-x 0 0 transparent;
+	height: 13px;
+	width: 87px;
+	float: left;
+}
