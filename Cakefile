@@ -7,6 +7,6 @@ run = (args) ->
     proc.on 'exit', (status) ->
         process.exit(1) if status != 0
 
-task 'build', 'build the CoffeeScript language from source', build = (cb) ->
+task 'build', 'build the client side scripts', build = (cb) ->
     files = fs.readdirSync 'src'
     run ['-c', '-o', 'public/scripts', 'src']
