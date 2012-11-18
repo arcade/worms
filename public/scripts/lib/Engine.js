@@ -4,16 +4,6 @@
  * Date: 5/6/11
  * Time: 1:35 AM
  */
- 
-var stats = new Stats();
-stats.setMode(0); // 0: fps, 1: ms
-
-// Align top-left
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-
-document.body.appendChild( stats.domElement );
 
 var Engine = {};
 
@@ -90,6 +80,16 @@ Engine.renderChildren = function (context2d, units, x, y) {
 }
 
 Engine.start = function () {
+	var stats = new Stats();
+	stats.setMode(0); // 0: fps, 1: ms
+
+	// Align top-left
+	stats.domElement.style.position = 'absolute';
+	stats.domElement.style.left = '0px';
+	stats.domElement.style.top = '0px';
+
+	document.body.appendChild( stats.domElement );
+
 	log.debug('starting engine');
 	requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
 	                            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
