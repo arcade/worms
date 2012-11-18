@@ -6,11 +6,11 @@ html, body {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	background: linear-gradient(top, rgb(64,65,96) 50%, rgb(90,65,58) 90%);
-	/* For WebKit (Safari, Google Chrome etc) */
-    background: -webkit-gradient(linear, left top, left bottom, from(#404160), to(#5a413a));
-    /* For Mozilla/Gecko (Firefox etc) */
+    background: -webkit-linear-gradient(top, #404160, #5a413a);
     background: -moz-linear-gradient(top, #404160, #5a413a);
+    background: -ms-linear-gradient(top, #404160, #5a413a);
+    background: -o-linear-gradient(top, #404160, #5a413a);
+    background: -linear-gradient(top, #404160, #5a413a);
     /* For Internet Explorer 5.5 - 7 */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#404160, endColorstr=#5a413a);
     /* For Internet Explorer 8 */
