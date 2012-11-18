@@ -87,6 +87,7 @@ Engine.start = function () {
 	FpsStats.domElement.style.position = 'absolute';
 	FpsStats.domElement.style.left = '0px';
 	FpsStats.domElement.style.top = '0px';
+	FpsStats.domElement.style["z-index"] = '9999';
 
 	document.body.appendChild( FpsStats.domElement );
 
@@ -97,6 +98,7 @@ Engine.start = function () {
 	MsStats.domElement.style.position = 'absolute';
 	MsStats.domElement.style.left = '80px';
 	MsStats.domElement.style.top = '0px';
+	MsStats.domElement.style["z-index"] = '9999';
 
 	document.body.appendChild( FpsStats.domElement );
 	document.body.appendChild( MsStats.domElement );
