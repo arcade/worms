@@ -91,7 +91,7 @@ Engine.start = function () {
 	document.body.appendChild( FpsStats.domElement );
 
 	var MsStats = new Stats();
-	MsStats.setMode(0);
+	MsStats.setMode(1);
 
 	// Align top-left
 	MsStats.domElement.style.position = 'absolute';
