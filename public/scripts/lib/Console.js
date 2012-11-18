@@ -17,7 +17,7 @@ var Console = function(console) {
 	this.target.style.background = "url('images/resources/console.png') top left";
 	this.target.style.overflow = 'auto';
 	this.target.style.padding = '0px';
-	this.target.style.color = 'whit';
+	this.target.style.color = 'white';
 	this.target.style.fontFamily = 'monospace';
 	this.target.style.borderBottom = 'solid 2px #F00';
 
