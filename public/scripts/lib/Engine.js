@@ -80,24 +80,37 @@ Engine.renderChildren = function (context2d, units, x, y) {
 }
 
 Engine.start = function () {
-	var stats = new Stats();
-	stats.setMode(0); // 0: fps, 1: ms
+	var FpsStats = new Stats();
+	FpsStats.setMode(0);
 
 	// Align top-left
-	stats.domElement.style.position = 'absolute';
-	stats.domElement.style.left = '0px';
-	stats.domElement.style.top = '0px';
+	FpsStats.domElement.style.position = 'absolute';
+	FpsStats.domElement.style.left = '0px';
+	FpsStats.domElement.style.top = '0px';
 
-	document.body.appendChild( stats.domElement );
+	document.body.appendChild( FpsStats.domElement );
+
+	var MsStats = new Stats();
+	MsStats.setMode(0);
+
+	// Align top-left
+	MsStats.domElement.style.position = 'absolute';
+	MsStats.domElement.style.left = '80px';
+	MsStats.domElement.style.top = '0px';
+
+	document.body.appendChild( FpsStats.domElement );
+	document.body.appendChild( MsStats.domElement );
 
 	log.debug('starting engine');
 	requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
 	                            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 	(function animloop() {
-        stats.begin();
+        FpsStats.begin();
+        MsStats.begin();
 	    requestAnimationFrame(animloop);
 	    Engine.render();
-        stats.end();
+        FpsStats.end();
+        MsStats.end();
     })();
 	//this.render();
 	//setInterval('Engine.render()', 40);
